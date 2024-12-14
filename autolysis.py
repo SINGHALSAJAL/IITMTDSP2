@@ -20,11 +20,11 @@ import os
 import sys
 
 def get_token():
-    """Prompt the user to enter the AIPROXY token."""
-    token = input("Enter your AIPROXY token: ").strip()
+    token = os.environ.get("AIPROXY_TOKEN")
     if not token:
-        raise ValueError("AIPROXY token is required to proceed.")
+        raise ValueError("AIPROXY_TOKEN environment variable not set.")
     return token
+
 
 def create_correlation_heatmap(data):
     """Creates a correlation heatmap and saves it to a file."""
