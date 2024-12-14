@@ -20,9 +20,10 @@ import os
 import sys
 
 def get_token():
-    token = os.environ.get("AIPROXY_TOKEN")
+    """Prompt the user to enter the AIPROXY token."""
+    token = input("Enter your AIPROXY token: ").strip()
     if not token:
-        raise ValueError("AIPROXY_TOKEN environment variable not set.")
+        raise ValueError("AIPROXY token is required to proceed.")
     return token
 
 
