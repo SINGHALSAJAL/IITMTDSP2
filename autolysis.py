@@ -1,3 +1,15 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "seaborn",
+#   "pandas",
+#   "matplotlib",
+#   "httpx",
+#   "chardet",
+#   "numpy",
+#   "openai"
+# ]
+# ///
 import pandas as pd
 import openai
 import matplotlib
